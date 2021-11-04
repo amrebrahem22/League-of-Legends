@@ -11,12 +11,25 @@
     font-family: $font-family;
     border-top-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
+    transition: all .5s ease;
 
     &-main {
         background-color: $main-color;
+
+        &:hover {
+            background: transparent; 
+            border: 4px solid $main-color;
+            padding: .8rem 2.8rem
+        }
     }
 
     &-second {
         background-color: $second-color;
+
+        &:hover {
+            background: transparent;
+            border: 4px solid $second-color;
+            padding: .8rem 2.8rem
+        }
     }
 }

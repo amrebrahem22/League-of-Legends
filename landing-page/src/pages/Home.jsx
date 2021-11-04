@@ -20,7 +20,7 @@ const swiperOptions = {
 const Home = () => {
     return (
         <>
-            <Swiper {...swiperOptions}>
+            <Swiper {...swiperOptions} pagination={{ clickable: true }}>
                 <SwiperSlide>
                     {({ isActive }) => <Welcome isActive={isActive} />}
                 </SwiperSlide>
