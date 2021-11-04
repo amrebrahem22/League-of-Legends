@@ -2,7 +2,8 @@ import React from 'react'
 import {Swiper, SwiperSlide} from 'swiper/react';
 import SwiperCore, { EffectFade, Mousewheel, Pagination } from 'swiper'
 
-import { Welcome } from '../components/home-section'
+import { Welcome, Champion, ChampionDetail, Trailer } from '../components/home-section'
+import { championsData } from '../assets/dummy'
 
 SwiperCore.use([Mousewheel, Pagination, EffectFade])
 
@@ -24,9 +25,19 @@ const Home = () => {
                     {({ isActive }) => <Welcome isActive={isActive} />}
                 </SwiperSlide>
                 <SwiperSlide>
-                    Slide 2
+                    {({ isActive }) => <Champion isActive={isActive} />}
+                </SwiperSlide>
+                <SwiperSlide>
+                    {({ isActive }) => <Trailer isActive={isActive} />}
                 </SwiperSlide>
             </Swiper>
+            {
+                championsData.map((item, index) => <ChampionDetail
+                    key={index}
+                    item={item}
+                    id={index}
+                />)
+            }
         </>
     )
 }
