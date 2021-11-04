@@ -1,6 +1,5 @@
 @use "../../scss/" as *;
 
-
 .header {
     height: $header-height;
     position: fixed;
@@ -33,19 +32,20 @@
 
         a {
             display: inline-block;
-            padding: .5rem;
+            padding: 0.5rem;
             text-transform: uppercase;
             position: relative;
             pointer-events: visible;
 
-            &::before, &::after {
-                content:'';
+            &::before,
+            &::after {
+                content: "";
                 position: absolute;
                 height: 2px;
                 width: 0;
                 background-color: $main-color;
-                transition: width .3s ease;
-            } 
+                transition: width 0.3s ease;
+            }
 
             &:hover::before,
             &:hover::after {

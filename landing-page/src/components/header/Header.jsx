@@ -1,21 +1,22 @@
 import React from 'react'
-import "./header.scss";
 
-import { logo } from '../../assets/images';
+import './header.scss'
+
+import { logo } from '../../assets/images'
 
 const Header = () => {
     return (
         <div className="header">
             <div className="header__inner container">
                 <div className="header__logo">
-                    <img src={logo} alt="logo" />
+                    <img src={logo} alt="" />
                 </div>
-                <div className="header__nav">
-                    <li><a href="#">Overview</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Champions</a></li>
-                    <li><a href="#">Support</a></li>
-                </div>
+                <ul className="header__nav">
+                    <li><a href="#">overview</a></li>
+                    <li><a href="#">news</a></li>
+                    <li><a href="#">champions</a></li>
+                    <li><a href="#">support</a></li>
+                </ul>
             </div>
         </div>
     )
