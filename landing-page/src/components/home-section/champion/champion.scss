@@ -18,6 +18,7 @@
         .swiper-slide {
             transform: translateX(0);
             opacity: 1;
+            width: 400px;
 
             @for $i from 1 through 10 {
                 &:nth-child(#{$i}) {
