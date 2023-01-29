@@ -3,3 +3,30 @@
     align-items: $aligin-item;
     justify-content: $justify-content;
 }
+
+@mixin mobile {
+    @media (max-width: 700px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 700px) and (max-width: 900px) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media (min-width: 1000px){
+        @content;
+    }
+}
+@mixin laptop-large {
+    @media (min-width: 1439px){
+        @content;
+    }
+}
+@mixin laptop-x-large {
+    @media (min-width: 2500px){
+        @content;
+    }
+}

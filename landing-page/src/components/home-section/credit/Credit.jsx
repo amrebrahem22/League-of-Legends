@@ -31,6 +31,7 @@ const Credit = props => {
                 width="100%"
                 height="auto"
                 loop={true}
+                autoPlay={true}
                 className="overlay"
             >
                 <source src={bgVideo} type="video/mp4"/>

@@ -8,6 +8,12 @@
     width: 100%;
     z-index: 100;
     pointer-events: none;
+    @include tablet {
+        padding: 0 2rem;
+    }
+    @include laptop {
+        padding: 0 4rem;
+    }
 
     &__inner {
         @include flex(center, space-between);
@@ -17,7 +23,6 @@
     &__logo {
         width: 145px;
         pointer-events: visible;
-
         img {
             width: 100%;
         }
@@ -25,9 +30,11 @@
 
     &__nav {
         @include flex(center, space-between);
-
         li ~ li {
             margin-left: 1rem;
+            @include mobile {
+                margin: 0;
+            }
         }
 
         a {
@@ -36,6 +43,9 @@
             text-transform: uppercase;
             position: relative;
             pointer-events: visible;
+            @include mobile {
+                font-size: .750rem;
+            }
 
             &::before,
             &::after {

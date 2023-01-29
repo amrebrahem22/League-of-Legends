@@ -12,6 +12,17 @@
     border-top-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
     transition: all .5s ease;
+    @include mobile {
+        font-size: .8rem;
+        padding: 1rem 1rem;;
+    }
+    @include tablet {
+        font-size: .8rem;
+        padding: 1rem 2rem;;
+    }
+    @include laptop {
+        padding: 1rem 2rem;;
+    }
 
     &-main {
         background-color: $main-color;

@@ -3,8 +3,18 @@
 .welcome {
     &__content {
         @include flex(center, center);
+        @include mobile {
+            flex-direction: column;
+            position: relative;
+        }
+        @include laptop-large {
+            padding: 0 6rem;
+        }
+        @include laptop-x-large {
+            padding: 0 41rem;
+        }
     }
-
+    
     &__info,
     &__img {
         width: 50%;
@@ -13,12 +23,30 @@
 
     &__info {
         @include flex(flex-start, flex-end);
+        @include mobile {
+            width: 100%;
+            padding-right: 2rem;
+        }
 
         &__content {
-            padding-left: 8rem;
-
+            padding-left: 4rem;
+            @include mobile {
+                padding-left: 2rem;;
+                .title {
+                    font-size: .5rem
+                };
+            }
+            @include tablet {
+                padding-left: 2rem;
+            }
             .description {
                 font-size: 1rem;
+                @include mobile {
+                    font-size: .750rem;
+                }
+                @include tablet {
+                    font-size: .850rem;
+                }
             }
 
             .btns > * ~ * {
@@ -28,21 +56,32 @@
     }
 
     &__img {
-        @include flex(flex-end, flex-start);
-
+        @include flex(flex-start, flex-start);
+        @include mobile {
+            display: none;;
+        }
         &__slide {
-            height: 500px;
+            height: 750px;
+            width: 750px;
             text-align: center;
             overflow: hidden;
+            @include tablet {
+                height: 500px;
+                width: 500px;
+            }
+            @include laptop {
+                height: 500px;
+                width: 500px;
+            }
 
             canvas {
                 display: block;
             }
         }
 
-        img {
-            width: 500px;
-            height: 500px;
-        }
+        // img {
+        //     width: 800px;
+        //     height: 800px;
+        // }
     }
 }
