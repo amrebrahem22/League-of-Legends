@@ -30,7 +30,9 @@ const Credit = (props) => {
         width="100%"
         height="auto"
         loop={true}
+        autoPlay={true}
         className="overlay"
+        muted={true}
       >
         <source src={bgVideo} type="video/mp4" />
       </video>
